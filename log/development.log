@@ -6302,3 +6302,2258 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 99ms (Views: 93.4ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-09 18:28:32 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#welcome as HTML
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/welcome.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 622ms (Views: 611.4ms | ActiveRecord: 9.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-09 18:28:38 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qKKBjxc3yXE4kNG0OytVTvfPdxUrVaxAMPYgRq/nDk32ECtwUpJfhceblVvrzfDgvqbdcerGuNy4FWT70Lug+A=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-09 18:28:38 +0300
+Processing by PagesController#welcome as HTML
+  Rendering pages/welcome.html.erb within layouts/application
+  Rendered pages/welcome.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-09 18:28:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 87ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-10 14:49:31 +0300
+  [1m[35m (25.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#welcome as HTML
+  Rendering pages/welcome.html.erb within layouts/application
+  Rendered pages/welcome.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 1192ms (Views: 1179.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-10 14:49:35 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (209.9ms)
+Completed 200 OK in 389ms (Views: 291.0ms | ActiveRecord: 40.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-10 14:49:38 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0S4kbEVVokgMonP6QltcKFziugAUrgrvC9Wo7DmF8u220JKnSEIDsS6wUwdmOGGeFgrSmkeaMjiFfe9buBa+Hg==", "user"=>{"email"=>"28530@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (135.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "28530@mail.ru"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-01-10 11:49:38.620288"], ["last_sign_in_at", "2018-01-09 14:54:25.184946"], ["sign_in_count", 6], ["updated_at", "2018-01-10 11:49:38.622071"], ["id", 1]]
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 498ms (ActiveRecord: 154.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-10 14:49:38 +0300
+Processing by PagesController#welcome as HTML
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/welcome.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-01-10 14:54:17 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (19.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 120ms (Views: 65.8ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 14:54:23 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (7.6ms)
+  Rendered tasks/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 105ms (Views: 68.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 14:59:15 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.5ms)
+  Rendered tasks/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 82ms (Views: 75.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 15:02:01 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 8.3ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/models/task.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :name,:text, :project, :user, :status presence: true
+                                                          ^):
+  
+app/models/task.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/tasks_controller.rb:18:in `new'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 15:03:34 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 7.8ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/models/task.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :name, :text, :project, :user, :status presence: true
+                                                           ^):
+  
+app/models/task.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/tasks_controller.rb:18:in `new'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 15:03:54 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 7.4ms)
+
+
+  
+NoMethodError (undefined method `arity' for :project:Symbol):
+  
+app/models/task.rb:4:in `<class:Task>'
+app/models/task.rb:1:in `<top (required)>'
+app/controllers/tasks_controller.rb:18:in `new'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 15:04:24 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.9ms)
+  Rendered tasks/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 141ms (Views: 67.8ms | ActiveRecord: 13.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:30:43 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DquukIGotPDU8uAeJ1dpPtxKGeaeE2TCYh96uM3eUSdkqKYTB6ThpM86NEhLIkoYvH+GS1MdXveOcd+Pkyll2Q==", "task"=>{"name"=>"ы", "text"=>"аы", "project_id"=>"ыа"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (10.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.0ms)
+  Rendered tasks/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 213ms (Views: 69.5ms | ActiveRecord: 31.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:30:54 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jC2xjhNB6uqbvQpBHZ2I2TfMdnTuwrwS1aftKlyUJLvmLrkNlU2/voB13hdx6Kv/V/np2SPMhic5yUgdAmMQRQ==", "task"=>{"name"=>"gdf", "text"=>"dg", "project_id"=>"dfg"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (8.0ms)
+  Rendered tasks/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 102ms (Views: 90.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 20:34:25 +0300
+  
+SyntaxError (/home/panaev/TaskManager/app/controllers/tasks_controller.rb:31: syntax error, unexpected ':'):
+  
+app/controllers/tasks_controller.rb:31: syntax error, unexpected ':'
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 20:34:27 +0300
+  
+SyntaxError (/home/panaev/TaskManager/app/controllers/tasks_controller.rb:31: syntax error, unexpected ':'):
+  
+app/controllers/tasks_controller.rb:31: syntax error, unexpected ':'
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 20:34:35 +0300
+  
+SyntaxError (/home/panaev/TaskManager/app/controllers/tasks_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tasks_controller.rb:79: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 20:34:48 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 5.5ms)
+
+
+  
+NoMethodError (undefined method `tasks' for #<User:0x007ff83005d3b0>):
+  
+app/controllers/tasks_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2018-01-10 20:36:14 +0300
+Processing by PagesController#welcome as HTML
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/welcome.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 78ms (Views: 70.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-01-10 20:36:18 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `tasks' for #<User:0x007ff83af92650>):
+  
+app/controllers/tasks_controller.rb:8:in `index'
+Started GET "/projects" for 127.0.0.1 at 2018-01-10 20:36:22 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (10.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 145ms (Views: 76.6ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-01-10 20:37:20 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 110ms (Views: 64.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 20:37:35 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.3ms)
+  Rendered tasks/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 89ms (Views: 71.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:37:38 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EpNlO5bKeakbwQJ9e8qnc4Ds5nguntLZSXQEKgk+a1x4kG24EMYs/QAJ1isXv4RV4Nl51eOQ6OylGqEdV8lfog==", "task"=>{"name"=>"sdf", "text"=>"fsdf", "project_id"=>"fsdf"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 7.2ms)
+
+
+  
+NoMethodError (undefined method `empty' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started GET "/tasks/" for 127.0.0.1 at 2018-01-10 20:38:54 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 90ms (Views: 85.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 20:38:57 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 72ms (Views: 67.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 20:38:59 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 99ms (Views: 93.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 20:40:00 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:40:03 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"62LssXN1+fUL6EeekeYf63b1r55dZlSgWFphOsgQxu+BYeQy9XmsoRAgk8j9kzzNFsAwM5BobpW0NMQNlufyEQ==", "task"=>{"name"=>"fsd", "text"=>"fds", "project_id"=>"sdf"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `empty' for nil:NilClass):
+  
+app/controllers/tasks_controller.rb:31:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:40:27 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"62LssXN1+fUL6EeekeYf63b1r55dZlSgWFphOsgQxu+BYeQy9XmsoRAgk8j9kzzNFsAwM5BobpW0NMQNlufyEQ==", "task"=>{"name"=>"fsd", "text"=>"fds", "project_id"=>"sdf"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.3ms)
+  Rendered tasks/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 167ms (Views: 79.3ms | ActiveRecord: 18.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:40:31 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7n9CEtbn0hHTfYgh7jqyJu0yhtHFWprAXLrSln5aUSiEfEqRUOuHRci1XHeCT5EAjQcZfAhUoPWw1HehIK1l1g==", "task"=>{"name"=>"fsd", "text"=>"fds", "project_id"=>"1"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.9ms)
+  Rendered tasks/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 81ms (Views: 71.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:40:32 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WrxW1S25mOLIVBPultCBHcdi/TE8SsmfkDew//ANVY8wv15Wq7XNttOcx7j6paI7p1dinPFE86p8WRXIrvphcQ==", "task"=>{"name"=>"fsd", "text"=>"fds", "project_id"=>"2"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.3ms)
+  Rendered tasks/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 88ms (Views: 76.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:40:34 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"De7vYrHD7bOlYwqgbLpILd+rHeDD7jmQxso1p2KIV6Fn7efhN8+4576r3vYAz2sLv56CTQ7gA6UqpJCQPH9jXw==", "task"=>{"name"=>"fsd", "text"=>"fds", "project_id"=>"3"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (31.3ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "text", "user_id", "status", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "fsd"], ["text", "fds"], ["user_id", 1], ["status", "f"], ["project_id", 3], ["created_at", "2018-01-10 17:40:34.252058"], ["updated_at", "2018-01-10 17:40:34.252058"]]
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 95ms (ActiveRecord: 74.7ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 20:40:34 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 58.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-01-10 20:40:41 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 96ms (Views: 88.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-01-10 20:42:12 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 109ms (Views: 101.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-01-10 20:42:25 +0300
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 84ms (Views: 77.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 20:42:30 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.8ms)
+  Rendered tasks/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 91ms (Views: 85.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:42:34 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XDsP2avxAq8jKHE92FLiZHbmyqxYhE8RjsBMze1mlTg2OAdaLf1X+zjgpWu0J8FCFtNVAZWKdSRirun6s5Ghxg==", "task"=>{"name"=>"fdssdf", "text"=>"dsfsdf", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.9ms)
+  Rendered tasks/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 102ms (Views: 90.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 20:42:41 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 106ms (Views: 100.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:43:06 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XDsP2avxAq8jKHE92FLiZHbmyqxYhE8RjsBMze1mlTg2OAdaLf1X+zjgpWu0J8FCFtNVAZWKdSRirun6s5Ghxg==", "task"=>{"name"=>"fdssdf", "text"=>"dsfsdf", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.2ms)
+  Rendered tasks/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 77ms (Views: 67.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:44:13 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XDsP2avxAq8jKHE92FLiZHbmyqxYhE8RjsBMze1mlTg2OAdaLf1X+zjgpWu0J8FCFtNVAZWKdSRirun6s5Ghxg==", "task"=>{"name"=>"fdssdf", "text"=>"dsfsdf", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.6ms)
+  Rendered tasks/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 83ms (Views: 76.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dist/purify.min.js.map" for 127.0.0.1 at 2018-01-10 20:44:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/dist/purify.min.js.map"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:44:48 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zjpBs0/e+M1aGB/nqWLpgDhhbDE3v8PGsrXkBEI5eOKkOUkwydKtmUHQy7HFF8qmWFTznPqx+fNe20EzHM5MHA==", "task"=>{"name"=>"fdssdf", "text"=>"dsfsdf", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.2ms)
+  Rendered tasks/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 75ms (Views: 63.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:45:05 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5g2awy21/l0mvqdKHDEaTkzohj74hMtFjjYH4b46hi2MDpJAq7mrCT12cxxwRDloLN0ZkzWK8XBiWKLW4M2y0w==", "task"=>{"name"=>"fdssdf", "text"=>"dsfsdf", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (22.5ms)
+  Rendered tasks/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 121ms (Views: 110.1ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:54:10 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EQGIUhyxGDCqTaCkydFoixhMsNokOhz1vo1iE9xNu597AoDRmr1NZLGFdPKlpEuteHkvd+k0JsBS48ckgrqPYQ==", "task"=>{"name"=>"fdssdf", "text"=>"dsfsdf", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.3ms)
+  Rendered tasks/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 135ms (Views: 60.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 20:54:20 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.8ms)
+  Rendered tasks/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 72ms (Views: 67.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:54:22 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/a3xJ6guxLexZjcQF/NG1twnTHeXCFvaoiJlJ4I9zAaXrvmkLiKR46qu40Z7hmXwvBLT2loGYe9OTMAQ3Mr4+A==", "task"=>{"name"=>"dsad", "text"=>"dsa", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.0ms)
+  Rendered tasks/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 101ms (Views: 93.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:54:28 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nY8eNx2mdCxkAoMqs+ld2TmuRasvrp8Q9iGBWrLHsd73jBa0m6oheH/KV3zfnH7/WZvaBuKgpSUaTyRt7DCFIA==", "task"=>{"name"=>"dsad", "text"=>"dsa", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 139ms (Views: 74.5ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:54:49 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SlD764w7jQLl+qjNYObZnwxV6UZ50sYQP/99duSzx2cgU/NoCjfYVv4yfJsMk/q5bGB267Tc/CXTkdhBukTzmQ==", "task"=>{"name"=>"dsad", "text"=>"dsa", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.2ms)
+  Rendered tasks/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 127ms (Views: 63.3ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:54:50 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7LQSWOLxPVL3elN0Owo3qdbWTER/pR1Bs9qSEqqXTMeGtxrbZP1oBuyyhyJXfxSPtuPT6bKrJ3RftDcl9GB4OQ==", "task"=>{"name"=>"dsad", "text"=>"dsa", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.9ms)
+  Rendered tasks/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 72ms (Views: 63.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 20:54:51 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YMC/Pnia8rIOtoohINpZ+UGbxvyiSfQMm1H/r+itzNcKw7e9/pan5hV+XndMr3rfIa5ZUW9Hzjl3P1qYtlr4KQ==", "task"=>{"name"=>"dsad", "text"=>"dsa", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (7.2ms)
+  Rendered tasks/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 75ms (Views: 65.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 21:28:53 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FTuDJYZH6TR5MS6QnWAH+/QU9Vx2FxTGRfzcFthgpIB/OIumAEu8YGL5+sbxFSTdlCFq8bsZLvOpknkhhpeQfg==", "task"=>{"name"=>"dsad", "text"=>"dsa", "project_id"=>""}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "text", "user_id", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "dsad"], ["text", "dsa"], ["user_id", 1], ["status", "f"], ["created_at", "2018-01-10 18:28:53.719467"], ["updated_at", "2018-01-10 18:28:53.719467"]]
+  [1m[35m (55.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks/2
+Completed 302 Found in 125ms (ActiveRecord: 69.1ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2018-01-10 21:28:53 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 203ms (Views: 196.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 21:29:03 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 83ms (Views: 77.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 21:39:13 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 79ms (Views: 73.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 21:39:20 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 71ms (Views: 64.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 21:39:23 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 76ms (Views: 70.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 21:41:22 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 89ms (Views: 83.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 21:41:28 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 91ms (Views: 85.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 21:42:24 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 153ms (Views: 99.8ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:42:25 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.2ms)
+  Rendered tasks/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 85ms (Views: 74.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 21:42:29 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 72ms (Views: 64.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 21:42:56 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 83ms (Views: 77.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 21:47:10 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 112ms (Views: 106.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:47:11 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (24.4ms)
+  Rendered tasks/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 105ms (Views: 96.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:47:55 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (7.2ms)
+  Rendered tasks/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 92ms (Views: 86.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:47:56 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (6.2ms)
+  Rendered tasks/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 75ms (Views: 69.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:47:56 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (9.1ms)
+  Rendered tasks/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 117ms (Views: 111.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:47:56 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (8.4ms)
+  Rendered tasks/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 92ms (Views: 86.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:48:52 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (22.7ms)
+  Rendered tasks/new.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 97ms (Views: 91.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:56:30 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  Rendered tasks/_form.html.erb (381.4ms)
+  Rendered tasks/new.html.erb within layouts/application (383.7ms)
+Completed 500 Internal Server Error in 394ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `projects' for #<#<Class:0x007ff83b1f9dd0>:0x007ff83b3def88>
+Did you mean?  @projects):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class=class="form-control""col-lg-10">
+    36:    <%= f.collection_select(projects) %>
+    37:     </div>
+    38:     <%=f.error_span(:project_id) %>
+    39:   </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352061140160'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352061140160'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352061268480'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:56:43 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (8.5ms)
+  Rendered tasks/new.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 4..6)):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class=class="form-control""col-lg-10">
+    36:    <%= f.collection_select(:projects) %>
+    37:     </div>
+    38:     <%=f.error_span(:project_id) %>
+    39:   </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70351967390480'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70351967390480'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70351966970840'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:56:51 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.5ms)
+  Rendered tasks/new.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 4..6)):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class=class="form-control""col-lg-10">
+    36:    <%= f.collection_select(@projects) %>
+    37:     </div>
+    38:     <%=f.error_span(:project_id) %>
+    39:   </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352070301300'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352070301300'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352001600040'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:57:03 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (7.1ms)
+  Rendered tasks/new.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 4..6)):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class=class="form-control""col-lg-10">
+    36:    <%= f.collection_select(@projects.name) %>
+    37:     </div>
+    38:     <%=f.error_span(:project_id) %>
+    39:   </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352058611400'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352058611400'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352058654440'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:58:12 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/new.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:36: syntax error, unexpected keyword_class, expecting ')'
+...( f.select name="user_id" class="form-control");@output_buff...
+...                               ^
+/home/panaev/TaskManager/app/views/tasks/_form.html.erb:55: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:36: syntax error, unexpected keyword_class, expecting ')'
+app/views/tasks/_form.html.erb:55: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_47158387618360'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:58:35 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:36: syntax error, unexpected keyword_class, expecting ')'
+....select name="project_id" class="form-control");@output_buff...
+...                               ^
+/home/panaev/TaskManager/app/views/tasks/_form.html.erb:55: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:36: syntax error, unexpected keyword_class, expecting ')'
+app/views/tasks/_form.html.erb:55: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352058279260'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:58:56 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (8.0ms)
+  Rendered tasks/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 134ms (Views: 127.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:59:06 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (9.2ms)
+  Rendered tasks/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 113ms (Views: 107.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:59:28 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (10.7ms)
+  Rendered tasks/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 112ms (Views: 106.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 21:59:36 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (6.4ms)
+  Rendered tasks/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 82ms (Views: 76.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:31 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.7ms)
+  Rendered tasks/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352071893780'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:32 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352067834580'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:32 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.2ms)
+  Rendered tasks/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352072359280'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:32 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 85.6ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352071645620'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:33 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.8ms)
+  Rendered tasks/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352055424100'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:33 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.5ms)
+  Rendered tasks/new.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 22.5ms)
+
+
+  
+SyntaxError (/home/panaev/TaskManager/app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/tasks/_form.html.erb:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352061281160'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:40 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (110.5ms)
+  Rendered tasks/new.html.erb within layouts/application (113.1ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `Project' for #<Task:0x007ff83a4640d0>
+Did you mean?  project
+               project=):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(@projects.name) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352051828520'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352051828520'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352053108560'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:42 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (17.0ms)
+  Rendered tasks/new.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `Project' for #<Task:0x007ff83adee420>
+Did you mean?  project
+               project=):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(@projects.name) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352053927360'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352053927360'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352058148060'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:42 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (37.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (17.4ms)
+  Rendered tasks/new.html.erb within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 37.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `Project' for #<Task:0x007ff83abc4be0>
+Did you mean?  project
+               project=):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(@projects.name) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352056694500'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352056694500'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352056988780'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:42 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:42 +0300
+Processing by TasksController#new as HTML
+  Rendered tasks/_form.html.erb (20.4ms)
+  Rendered tasks/new.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.2ms)
+
+
+  
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+ActionView::Template::Error (undefined method `Project' for #<Task:0x007ff83b38bf68>
+Did you mean?  project
+               project=):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(@projects.name) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352060513220'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352060513220'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352061004740'
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (22.6ms)
+  Rendered tasks/new.html.erb within layouts/application (25.9ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `Project' for #<Task:0x007ff8302f7f08>
+Did you mean?  project
+               project=):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(@projects.name) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352059538960'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352059538960'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70351968513020'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:04:43 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (18.8ms)
+  Rendered tasks/new.html.erb within layouts/application (21.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `Project' for #<Task:0x007ff83c673a90>
+Did you mean?  project
+               project=):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(@projects.name) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70351969031320'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70351969031320'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352070452220'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:05:06 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (18.3ms)
+  Rendered tasks/new.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `Project' for #<Task:0x007ff83c143340>
+Did you mean?  project
+               project=):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(@projects.name) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352068171860'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352068171860'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352068283460'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:05:08 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 72ms (Views: 67.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:06:15 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.6ms)
+  Rendered tasks/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:06:16 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.0ms)
+  Rendered tasks/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 76ms (Views: 71.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:09:29 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  Rendered tasks/_form.html.erb (20.1ms)
+  Rendered tasks/new.html.erb within layouts/application (27.3ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Project::ActiveRecord_Associations_CollectionProxy:0x007ff83c4ff4e8>
+Did you mean?  ids):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_id, options_for_select(@projects.id)) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352069891020'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352069891020'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352070241660'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:09:31 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  Rendered tasks/_form.html.erb (12.7ms)
+  Rendered tasks/new.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Project::ActiveRecord_Associations_CollectionProxy:0x007ff83af906e8>
+Did you mean?  ids):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_id, options_for_select(@projects.id)) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352061502180'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352061502180'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352073656240'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:09:35 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "projects"."id" FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (6.1ms)
+  Rendered tasks/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 83ms (Views: 76.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:09:57 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  Rendered tasks/_form.html.erb (16.6ms)
+  Rendered tasks/new.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `names' for #<Project::ActiveRecord_Associations_CollectionProxy:0x007ff83c16b6d8>
+Did you mean?  name):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_name, options_for_select(@projects.names)) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352068258240'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352068258240'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352068366480'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:09:59 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  Rendered tasks/_form.html.erb (12.0ms)
+  Rendered tasks/new.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `names' for #<Project::ActiveRecord_Associations_CollectionProxy:0x007ff83c4ad5f8>
+Did you mean?  name):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_name, options_for_select(@projects.names)) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352000932160'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352000932160'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352055107320'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:10:05 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (35.5ms)
+  Rendered tasks/new.html.erb within layouts/application (40.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `project_name' for #<Task:0x007ff83a9ae9a0>
+Did you mean?  project):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_name, options_for_select(@projects.name)) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352000819520'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352000819520'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352055920260'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:10:06 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (29.6ms)
+  Rendered tasks/new.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `project_name' for #<Task:0x007ff83b4230e8>
+Did you mean?  project):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_name, options_for_select(@projects.name)) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352061253500'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352061253500'
+app/views/tasks/new.html.erb:5:in `_app_views_tasks_new_html_erb___205387232190845330_70352061400780'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:10:26 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.5ms)
+  Rendered tasks/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 79ms (Views: 73.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:10:39 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "projects"."id" FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/_form.html.erb (8.8ms)
+  Rendered tasks/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 95ms (Views: 88.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 22:15:57 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.5ms)
+  Rendered tasks/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 155ms (Views: 68.1ms | ActiveRecord: 20.9ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-01-10 22:16:03 +0300
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fbNyskTVLsm5TcyVDYp6JhKdWaBoCK/AohqoKtNDTKEXsHoxwtl7naKFGMNh/1kAcqjGDaUGlfVOdA0djbR4Xw==", "task"=>{"name"=>"asd", "text"=>"dgs", "project_id"=>"3"}, "commit"=>"Create Task"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "text", "user_id", "status", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "asd"], ["text", "dgs"], ["user_id", 1], ["status", "f"], ["project_id", 3], ["created_at", "2018-01-10 19:16:03.560440"], ["updated_at", "2018-01-10 19:16:03.560440"]]
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 45ms (ActiveRecord: 33.7ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2018-01-10 22:16:03 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 85ms (Views: 76.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 22:16:08 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 83ms (Views: 77.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-01-10 22:17:28 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 77ms (Views: 70.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2018-01-10 22:17:34 +0300
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 129ms (Views: 60.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-01-10 22:18:18 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-01-10 22:18:31 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 98ms (Views: 92.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:21:47 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 76ms (Views: 70.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 22:21:51 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 85ms (Views: 80.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:22:15 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 85ms (Views: 79.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 22:22:31 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:22:33 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 110ms (Views: 105.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-01-10 22:22:34 +0300
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (8.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_id, @project_options) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352071548940'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352071548940'
+app/views/tasks/edit.html.erb:5:in `_app_views_tasks_edit_html_erb__727532091408429505_70351969160740'
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 22:23:43 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 86ms (Views: 79.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-01-10 22:25:54 +0300
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 173ms (Views: 86.0ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-01-10 22:26:00 +0300
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (8.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    33:   <div class="form-group">
+    34:     <%= f.label :project_id, :class => 'control-label col-lg-2' %>
+    35:     <div class="col-lg-10">
+    36:       <%= f.select(:project_id, @project_options) %>
+    37: 
+    38: 
+    39:     </div>
+  
+app/views/tasks/_form.html.erb:36:in `block in _app_views_tasks__form_html_erb__3629677425147715371_70352070284900'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3629677425147715371_70352070284900'
+app/views/tasks/edit.html.erb:5:in `_app_views_tasks_edit_html_erb__727532091408429505_70352060101460'
+Started GET "/tasks/2/edit" for 127.0.0.1 at 2018-01-10 22:26:12 +0300
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (20.5ms)
+  Rendered tasks/edit.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 129ms (Views: 74.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:27:40 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 74ms (Views: 67.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 22:27:49 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 81ms (Views: 75.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-01-10 22:34:46 +0300
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 149ms (Views: 66.0ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:36:05 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 107ms (Views: 99.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-01-10 22:37:17 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 96ms (Views: 88.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:37:21 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 71ms (Views: 64.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/comments" for 127.0.0.1 at 2018-01-10 22:39:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:40:58 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.4ms)
+  Rendered tasks/show.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 163ms (Views: 84.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:41:14 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 101ms (Views: 89.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:41:34 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 79ms (Views: 69.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:41:40 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.1ms)
+  Rendered tasks/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 81ms (Views: 72.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:42:02 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 88ms (Views: 76.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:44:59 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for #<Task:0x007ff83aa70488>
+Did you mean?  committed!):
+    23:               :method => 'delete',
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: <% @task.comments.each do |comment| %>
+    27:   <hr>
+    28:   <strong>
+    29:     <%= comment.text %>
+  
+app/views/tasks/show.html.erb:26:in `_app_views_tasks_show_html_erb___3274292224664186514_70352054997040'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:45:33 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (20.8ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for #<Task:0x007ff83a6a9598>
+Did you mean?  comment
+               comment=):
+    23:               :method => 'delete',
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: <% @task.comments.each do |comment| %>
+    27:   <hr>
+    28:   <strong>
+    29:     <%= comment.text %>
+  
+app/views/tasks/show.html.erb:26:in `_app_views_tasks_show_html_erb___3274292224664186514_70352057286440'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:45:37 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (35.0ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column comments.task_id does not exist
+LINE 1: SELECT "comments".* FROM "comments" WHERE "comments"."task_i...
+                                                  ^
+: SELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1):
+    23:               :method => 'delete',
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: <% @task.comments.each do |comment| %>
+    27:   <hr>
+    28:   <strong>
+    29:     <%= comment.text %>
+  
+app/views/tasks/show.html.erb:26:in `_app_views_tasks_show_html_erb___3274292224664186514_70351968890060'
+Started GET "/tasks/" for 127.0.0.1 at 2018-01-10 22:46:28 +0300
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 136ms (Views: 102.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2018-01-10 22:46:32 +0300
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered projects/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 120ms (Views: 96.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:46:37 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for #<Task:0x007ff83c5ca648>
+Did you mean?  comment
+               comment=):
+    23:               :method => 'delete',
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: <% @task.comments.each do |comment| %>
+    27:   <hr>
+    28:   <strong>
+    29:     <%= comment.text %>
+  
+app/views/tasks/show.html.erb:26:in `_app_views_tasks_show_html_erb___3274292224664186514_70352070582060'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:46:56 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column comments.task_id does not exist
+LINE 1: SELECT "comments".* FROM "comments" WHERE "comments"."task_i...
+                                                  ^
+: SELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1):
+    23:               :method => 'delete',
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: <% @task.comment.each do |comment| %>
+    27:   <hr>
+    28:   <strong>
+    29:     <%= comment.text %>
+  
+app/views/tasks/show.html.erb:26:in `_app_views_tasks_show_html_erb___3274292224664186514_70352071170560'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:47:37 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (Unknown key: :optional. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/task.rb:6:in `<class:Task>'
+app/models/task.rb:1:in `<top (required)>'
+app/controllers/tasks_controller.rb:74:in `set_task'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:47:55 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/models/task.rb:6:in `<class:Task>'
+app/models/task.rb:1:in `<top (required)>'
+app/controllers/tasks_controller.rb:74:in `set_task'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:48:04 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (Unknown key: :optional. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/task.rb:6:in `<class:Task>'
+app/models/task.rb:1:in `<top (required)>'
+app/controllers/tasks_controller.rb:74:in `set_task'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:48:21 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column comments.task_id does not exist
+LINE 1: SELECT "comments".* FROM "comments" WHERE "comments"."task_i...
+                                                  ^
+: SELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1):
+    23:               :method => 'delete',
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: <% @task.comments.each do |comment| %>
+    27:   <hr>
+    28:   <strong>
+    29:     <%= comment.text %>
+  
+app/views/tasks/show.html.erb:26:in `_app_views_tasks_show_html_erb___3274292224664186514_70352060533460'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 22:48:21 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column comments.task_id does not exist
+LINE 1: SELECT "comments".* FROM "comments" WHERE "comments"."task_i...
+                                                  ^
+: SELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1):
+    23:               :method => 'delete',
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: <% @task.comments.each do |comment| %>
+    27:   <hr>
+    28:   <strong>
+    29:     <%= comment.text %>
+  
+app/views/tasks/show.html.erb:26:in `_app_views_tasks_show_html_erb___3274292224664186514_70352058710700'
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2897934451780944345)[0m
+  [1m[35m (29.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnTaskIdToComments (20180110195833)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (77.3ms)[0m  [1m[35mALTER TABLE "comments" ADD "task_id" integer[0m
+  [1m[35m (157.0ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_6bd05453df"
+FOREIGN KEY ("task_id")
+  REFERENCES "tasks" ("id")
+[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180110195833"]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (28.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2897934451780944345)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:01:45 +0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered comments/_form.html.erb (4.2ms)
+  Rendered tasks/show.html.erb within layouts/application (141.8ms)
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 30.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @comment, :html => { :class => "form-horizontal comment" } do |f| %>
+    2: 
+    3:   <% if @comment.errors.any? %>
+    4:     <div id="error_expl" class="panel panel-danger">
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__1936458688370568251_69919219618640'
+app/views/tasks/show.html.erb:34:in `_app_views_tasks_show_html_erb__3351141990907264666_69919218235160'
+Started GET "/tasks/new" for 127.0.0.1 at 2018-01-10 23:07:20 +0300
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (35.1ms)
+  Rendered tasks/new.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 1171ms (Views: 1162.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:07:25 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered comments/_form.html.erb (3.8ms)
+  Rendered tasks/show.html.erb within layouts/application (23.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @comment, :html => { :class => "form-horizontal comment" } do |f| %>
+    2: 
+    3:   <% if @comment.errors.any? %>
+    4:     <div id="error_expl" class="panel panel-danger">
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__1936458688370568251_69919182167900'
+app/views/tasks/show.html.erb:34:in `_app_views_tasks_show_html_erb__3351141990907264666_69919181988380'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:11:41 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered comments/_form.html.erb (2.7ms)
+  Rendered tasks/show.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @comment, :html => { :class => "form-horizontal comment" } do |f| %>
+    2: 
+    3:   <% if @comment.errors.any? %>
+    4:     <div id="error_expl" class="panel panel-danger">
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__1936458688370568251_69919316353180'
+app/views/tasks/show.html.erb:36:in `_app_views_tasks_show_html_erb__3351141990907264666_69919316206480'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:11:43 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered comments/_form.html.erb (3.1ms)
+  Rendered tasks/show.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @comment, :html => { :class => "form-horizontal comment" } do |f| %>
+    2: 
+    3:   <% if @comment.errors.any? %>
+    4:     <div id="error_expl" class="panel panel-danger">
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__1936458688370568251_69919249251000'
+app/views/tasks/show.html.erb:36:in `_app_views_tasks_show_html_erb__3351141990907264666_69919249089800'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:11:43 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered comments/_form.html.erb (3.0ms)
+  Rendered tasks/show.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @comment, :html => { :class => "form-horizontal comment" } do |f| %>
+    2: 
+    3:   <% if @comment.errors.any? %>
+    4:     <div id="error_expl" class="panel panel-danger">
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__1936458688370568251_69919251107200'
+app/views/tasks/show.html.erb:36:in `_app_views_tasks_show_html_erb__3351141990907264666_69919251239240'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:12:06 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered tasks/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 107ms (Views: 96.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:13:51 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (200.3ms)
+  Rendered tasks/show.html.erb within layouts/application (209.1ms)
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f2eac54e048>:0x007f2ea8236878>
+Did you mean?  font_path):
+    1: <%= form_with(model: comment, local: true) do |form| %>
+    2: 
+    3: 
+    4:   <div class="field">
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__1936458688370568251_69919182827540'
+app/views/tasks/show.html.erb:27:in `_app_views_tasks_show_html_erb__3351141990907264666_69919183059320'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:15:51 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (188.9ms)
+  Rendered tasks/show.html.erb within layouts/application (197.3ms)
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments_path' for #<#<Class:0x007f2eac54e048>:0x007f2ea8539098>
+Did you mean?  font_path):
+    1: <%= form_with(model: comment, local: true) do |form| %>
+    2: 
+    3: 
+    4:   <div class="field">
+  
+app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb__1936458688370568251_69919183250360'
+app/views/tasks/show.html.erb:27:in `_app_views_tasks_show_html_erb__3351141990907264666_69919184637320'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:20:23 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.0ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered tasks/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 122ms (Views: 106.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:20:39 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (107.9ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered tasks/show.html.erb within layouts/application (116.2ms)
+Completed 200 OK in 209ms (Views: 199.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:21:10 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (4.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."task_id" = $1[0m  [["task_id", 1]]
+  Rendered tasks/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 121ms (Views: 109.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/tasks/1" for 127.0.0.1 at 2018-01-10 23:21:17 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks/1" for 127.0.0.1 at 2018-01-10 23:21:50 +0300
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (327.2ms)
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `comment' for #<#<Class:0x007f2eac54e048>:0x007f2eb86edcf8>):
+    24:               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+    25:               :class => 'btn btn-danger' %>
+    26: 
+    27: <%= form_with(model: comment, local: true) do |form| %>
+    28: 
+    29: 
+    30:   <div class="field">
+  
+app/views/tasks/show.html.erb:27:in `_app_views_tasks_show_html_erb__3351141990907264666_69919319749640'
